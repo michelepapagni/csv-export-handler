@@ -21,7 +21,7 @@ $csv = $csvLibrary
     return response()->download($csv);
 ```
 
-### Method:
+### Methods:
 ->data: You can use Eloquent query, Query builder query (DB) or a simple array (required)<br>
 ->columns: use it if you want to export only some columns (optional)<br>
 ->fileName: this is the name of the exported file (required)<br>
