@@ -22,8 +22,8 @@ $csv = $csvLibrary
 ```
 
 ### Method:
-->data: You can use Eloquent query, Query builder query (DB) or a simple array (required)
-->columns: use it if you want to export only some columns (optional)
-->fileName: this is the name of the exported file (required)
-->path: you can specify the path of the saved file (default: storage/app/tmp/) (optional)
-->download(): use to create the download file (required)
+->data: You can use Eloquent query, Query builder query (DB) or a simple array (required)<br>
+->columns: use it if you want to export only some columns (optional)<br>
+->fileName: this is the name of the exported file (required)<br>
+->path: you can specify the path of the saved file (default: storage/app/tmp/) (optional)<br>
+->download(): use to create the download file (required)<br>
