@@ -6,7 +6,7 @@
  * Time: 15:00
  */
 
-namespace MYNamespace;
+namespace Cayenne\Libraries;
 
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Support\Collection as DBCollection;
@@ -24,7 +24,7 @@ class CsvHandler
 
     /**
      * @param $data
-     * @return CsvLibrary
+     * @return CsvHandler
      * @throws \Exception
      */
     public function data($data): self
@@ -128,7 +128,12 @@ class CsvHandler
     private function processData()
     {
         foreach ($this->data as $k => $datum) {
-            $this->data[$k] = collect($datum)->only($this->columns)->all();
+            $completeDatum = $datum;
+            $this->data[$k] = [];
+
+            foreach ($this->columns as $column) {
+                $this->data[$k][$column] = $completeDatum[$column];
+            }
         }
     }
 
