@@ -2,7 +2,8 @@
 This is a simple csv export handler
 
 ## Getting Started
-Import the library as library into your laravel project
+- Import the class into your laravel project
+- Change the namespace in the class
 
 ### Instantiate in your controller
 ```
